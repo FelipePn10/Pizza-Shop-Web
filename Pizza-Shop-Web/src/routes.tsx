@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { Dashboard } from "./pages/app/dashboard";
+import { Dashboard } from "./pages/app/dashboard/dashboard";
 import { SingIn } from "./pages/auth/sign-in";
 import { SingUp } from "./pages/auth/sign-up";
 import { PolicesTerms } from "./pages/policesAndTerms/policesTerms";
