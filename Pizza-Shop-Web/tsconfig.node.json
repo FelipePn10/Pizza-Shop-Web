@@ -8,7 +8,7 @@
     "strict": true
   },
   "include": [
-    "vite.config.ts",
+    "Pizza-Shop-Web/vite.config.ts",
     "tailwind.config.ts",
     "postcss.config.cjs",
     "eslint.config.js"
