@@ -2,17 +2,10 @@ import colors from "tailwindcss/colors";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { ResponsiveContainer, Pie, PieChart, Cell } from "recharts";
-import { BarChart } from "lucide-react";
+import { BarChart, Loader2 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { getPopularProducts } from "@/api/get-popular-products";
 
-const data = [
-  { product: "Pizza Pepperoni - 8 pedaços", amount: 40 },
-  { product: "Refrigerante Coca-Cola - 2L", amount: 70 },
-  { product: "Pizza Mussarela - 6 pedaços", amount: 65 },
-  { product: "Kit-Kat", amount: 15 },
-  { product: "Refrigerante Sprit Sabor Limão - 1L", amount: 35 },
-];
 
 const COLORS = [
   colors.blue[600],
@@ -39,7 +32,7 @@ export function PoularProductsChart() {
         </div>
       </CardHeader>
       <CardContent>
-        {popularProducts && (
+        {popularProducts ? (
           <ResponsiveContainer width="100%" height={240}>
           <PieChart style={{ fontsize: 12 }}>
             <Pie
@@ -94,6 +87,10 @@ export function PoularProductsChart() {
             </Pie>
           </PieChart>
         </ResponsiveContainer>
+        ) : (
+          <div className="flex h-[240px] w-full items-center justify-between">
+            <Loader2 className="h-8 w-8 text-emerald-500 animate-spin"/>
+          </div>
         )}
       </CardContent>
     </Card>
