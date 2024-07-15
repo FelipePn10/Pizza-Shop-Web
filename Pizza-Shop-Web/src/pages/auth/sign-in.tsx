@@ -77,6 +77,17 @@ export function SingIn() {
               Acessar Painel
             </Button>
           </form>
+            <div className="flex items-center justify-center mt-6">
+            <p className="text-muted-foreground">
+              Por enquanto, o sistema de autenticação de login via e-mail, 
+              não está funcionando. 
+              Você pode acessar a aplicação através do link abaixo! 
+              Obrigado pela atenção. {""}{""}{""}
+              <Link to={"/"} className="text-rose-800 hover:text-red-600">
+                  Acessar o dashboard
+              </Link>
+            </p>
+          </div>  
         </div>
       </div>
     </>
